@@ -3,7 +3,7 @@ import "./App.css";
 import NavBar from "./NavBar";
 import Form from "./Form";
 import ac from "./ac";
-// import FormResults from "./FormResults";
+import FormResults from "./FormResults";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 class App extends React.Component {
@@ -15,10 +15,10 @@ class App extends React.Component {
           <Route exact path='/' component={HomeText} />
           <Route path='/form' component={Form} />
           <Route path='/ac' component={ac} />
-          {/* <Route
+          { <Route
             path='/results'
             render={props => <FormResults items={props} {...props} />}
-          ></Route> */}
+          ></Route> }
         </Switch>
       </Router>
     );

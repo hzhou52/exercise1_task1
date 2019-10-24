@@ -21,7 +21,9 @@ class Form extends React.Component {
     this.props.history.push({
       pathname: "/results",
       state: this.state
+
     });
+   
     event.preventDefault();
   }
   render() {
@@ -30,7 +32,7 @@ class Form extends React.Component {
         <TextField
           label='Fav Pet'
           pet='favPet'
-          value={this.state.favPet}
+          value={this.state.Pet}
           onChange={this.handleChange}
           margin='normal'
           variant='outlined'
@@ -40,7 +42,7 @@ class Form extends React.Component {
         <TextField
           label='Fav Color'
           color='favColor'
-          value={this.state.favColor}
+          value={this.state.Color}
           onChange={this.handleChange}
           margin='normal'
           variant='outlined'
@@ -49,7 +51,7 @@ class Form extends React.Component {
         <TextField
           label='Fav Car'
           car='favCar'
-          value={this.state.firstPet}
+          value={this.state.Car}
           onChange={this.handleChange}
           margin='normal'
           variant='outlined'
