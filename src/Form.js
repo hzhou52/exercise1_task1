@@ -15,15 +15,16 @@ class Form extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleChange(event) {
-    this.setState({ [event.target.pet]: event.target.value });
+    this.setState({ [event.target.name]: event.target.value });
   }
   handleSubmit(event) {
     this.props.history.push({
       pathname: "/results",
-      state: this.state
+      state: this.state,
+      
 
     });
-   
+    alert('A name was submitted: ' + this.state.firstPet);
     event.preventDefault();
   }
   render() {
@@ -31,8 +32,8 @@ class Form extends React.Component {
       <div>
         <TextField
           label='Fav Pet'
-          pet='favPet'
-          value={this.state.Pet}
+          name='firstPet'
+          value={this.state.pet}
           onChange={this.handleChange}
           margin='normal'
           variant='outlined'
@@ -41,7 +42,7 @@ class Form extends React.Component {
         </br>
         <TextField
           label='Fav Color'
-          color='favColor'
+          name='favColor'
           value={this.state.Color}
           onChange={this.handleChange}
           margin='normal'
@@ -50,7 +51,7 @@ class Form extends React.Component {
         <br></br>
         <TextField
           label='Fav Car'
-          car='favCar'
+          name='favCar'
           value={this.state.Car}
           onChange={this.handleChange}
           margin='normal'
