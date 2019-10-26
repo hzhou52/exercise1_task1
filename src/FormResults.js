@@ -1,4 +1,7 @@
 import React from "react";
 export default function FormResults(props) {
-  return <p>todo for task 2</p>;
+
+  return <p>result has popped up in the window 
+    
+  </p>;
 }

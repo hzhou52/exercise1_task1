@@ -24,7 +24,13 @@ class Form extends React.Component {
       
 
     });
-    alert('A survey was submitted: ' + this.state.firstPet + this.state.favColor + this.state.favCar);
+    alert('A survey was submitted: ' 
+    + 'fav pet:'
+    +this.state.firstPet + '    ' 
+    + 'fav color:'
+    + this.state.favColor + '    '
+    + 'fav car:'
+    + this.state.favCar);
     event.preventDefault();
   }
   render() {
