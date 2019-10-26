@@ -24,7 +24,7 @@ class Form extends React.Component {
       
 
     });
-    alert('A name was submitted: ' + this.state.firstPet);
+    alert('A survey was submitted: ' + this.state.firstPet + this.state.favColor + this.state.favCar);
     event.preventDefault();
   }
   render() {
